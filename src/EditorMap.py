@@ -28,19 +28,21 @@ class EditorMap:
             self.window.fill("black")
             self.screen.blit(self.tileset_surf, (0, 0))
             self.screen.blit(self.paintset_surf, (self.rect_x*8 +10,self.rect_y*8+10 ))
+            self.screen.blit(self.controlset_surf,(0,(self.rect_y*15)))
             pygame.display.flip()
         
         pygame.quit()
-        
+    
     def splitScreen(self):
         
         self.tileset_surf = pygame.Surface(((self.rect_x*8),self.rect_y*8 ))
         self.tileset_surf.fill((255,255,255))
         
-        
-        
         self.paintset_surf = pygame.Surface(((self.rect_x*8),self.rect_y*8 ))
         self.paintset_surf.fill((255,255,255)) 
+        
+        self.controlset_surf = pygame.Surface(((self.rect_x*3),self.rect_y*2))
+        self.controlset_surf.fill((255,255,0))
         
  
 e = EditorMap()         
