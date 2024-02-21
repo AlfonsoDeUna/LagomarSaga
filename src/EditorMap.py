@@ -33,8 +33,13 @@ class EditorMap:
         pygame.quit()
         
     def splitScreen(self):
+        '''
+        Este self valdra a futuro para poder hacer la ventana moduar
         
-        self.tileset_surf = pygame.Surface(((self.rect_x*8),self.rect_y*8 ))
+        self.height = self.window.get_height()
+        '''
+        
+        self.tileset_surf = pygame.Surface(((self.rect_x * 8), (self.rect_y*14)))
         self.tileset_surf.fill((255,255,255))
         
         
