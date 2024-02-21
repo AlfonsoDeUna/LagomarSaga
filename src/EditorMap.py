@@ -27,7 +27,7 @@ class EditorMap:
                      
             self.window.fill("black")
             self.screen.blit(self.tileset_surf, (0, 0))
-            self.screen.blit(self.paintset_surf, (self.rect_x*8 +10,self.rect_y*8+10 ))
+            self.screen.blit(self.paintset_surf, (self.rect_x*10 +10,self.rect_y*0 ))
             pygame.display.flip()
         
         pygame.quit()
@@ -39,7 +39,7 @@ class EditorMap:
         
         
         
-        self.paintset_surf = pygame.Surface(((self.rect_x*8),self.rect_y*8 ))
+        self.paintset_surf = pygame.Surface(((self.rect_x*15),self.rect_y*30 ))
         self.paintset_surf.fill((255,255,255)) 
         
  
